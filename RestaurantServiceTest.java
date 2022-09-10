@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.*;
 
 import java.time.LocalTime;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -66,7 +67,7 @@ class RestaurantServiceTest {
     }
 
     @Test
-    public void orderValue(List<Integer> price) throws restaurantNotFoundException {
+    public int orderValue(List<Integer> price) {
         int totalOrderValue= 0;
         for (int i: price) {
             totalOrderValue += i;
